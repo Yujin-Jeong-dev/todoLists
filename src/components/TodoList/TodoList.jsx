@@ -11,12 +11,23 @@ export default function TodoList() {
     const handleAdd = (todo) => {
         setTodos([...todos, todo]);
     }
+
+    const handleUpdate = (update) => {
+        //기존 투두에서 해당 투두와 일치한 투두만 status를 변경해줌.
+        setTodos(todos.map((list) => list.id === update.id ? update : list));
+
+    }
+
+    const handleDelete = (deleted) => {
+        setTodos(todos.filter((list) => list.id !== deleted.id))
+    }
+
     return (
         <section className={style.container}>
             <AddTodo onAdd={handleAdd} />
             <ul className={style.lists}>
                 {todos.map((todo) => (
-                    <Todo key={todo.id} todo={todo} />
+                    <Todo key={todo.id} todo={todo} onUpdate={handleUpdate} onDelete={handleDelete} />
                 ))}
             </ul>
 

@@ -1,0 +1,9 @@
+.lists {
+    width: 600px;
+    margin: auto;
+    padding: 1rem;
+    background-color: #ffe5d9;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow-y: scroll;
+}
