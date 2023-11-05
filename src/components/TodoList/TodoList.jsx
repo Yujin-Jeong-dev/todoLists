@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AddTodo from '../AddTodo/AddTodo';
 import Todo from '../Todo/Todo';
 import style from './TodoList.module.css';
 
 export default function TodoList() {
-    const [todos, setTodos] = useState([
-        { id: 1, title: '공부하기', text: '리액트 이론 공부', status: 'active' },
-        { id: 2, title: '운동하기', text: '하체 운동', status: 'active' }
-    ]);
+    //로컬스토리지에서 투두 가져오기 
+    const [todos, setTodos] = useState(() => getTodos());
 
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos));
+    }, [todos])
     const incompletedTodos = filterTodos(todos, 'active');
     const completedTodos = filterTodos(todos, 'completed');
 
@@ -45,6 +46,11 @@ export default function TodoList() {
 
         </section>
     );
+}
+
+function getTodos() {
+    const todos = localStorage.getItem('todos');
+    return todos ? JSON.parse(todos) : [];
 }
 
 function filterTodos(todos, status) {
