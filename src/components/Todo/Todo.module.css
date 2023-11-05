@@ -1,8 +1,14 @@
 .todo {
+    width: 330px;
     display: flex;
     flex-direction: column;
     list-style: none;
     font-size: 1.2rem;
+    padding: 0.5rem 0.3rem;
+    border: 3px solid #ff686b;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 
