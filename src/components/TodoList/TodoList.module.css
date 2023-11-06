@@ -1,8 +1,25 @@
 .lists {
-    width: 100%;
+    width: 60%;
+    max-height: 600px;
+    margin: auto;
+    padding: 1.2rem 1rem;
+    background-color: #fae0e4;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* flex: 1 1 auto; */
+    overflow-y: auto;
+}
+
+.list {
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
-    padding: 2rem 3rem;
-    overflow-y: scroll;
+    gap: 0.8rem;
 }
+
+.title {
+    color: #283618;
+}
+
+/* @media screen and (max-width:768px) {
+   
+} */

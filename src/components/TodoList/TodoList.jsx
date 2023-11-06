@@ -31,18 +31,20 @@ export default function TodoList() {
     return (
         <section className={style.container}>
             <AddTodo onAdd={handleAdd} />
-            <h3> Working 🔥</h3>
-            <ul className={style.lists}>
-                {incompletedTodos.map((todo) => (
-                    <Todo key={todo.id} todo={todo} onUpdate={handleUpdate} onDelete={handleDelete} isCompleted={false} />
-                ))}
-            </ul>
-            <h3>Complete! ☑️</h3>
-            <ul className={style.lists}>
-                {completedTodos.map((todo) => (
-                    <Todo key={todo.id} todo={todo} onUpdate={handleUpdate} onDelete={handleDelete} isCompleted />
-                ))}
-            </ul>
+            <div className={style.lists}>
+                <h3 className={style.title}> Working..🔥</h3>
+                <ul className={style.list}>
+                    {incompletedTodos.map((todo) => (
+                        <Todo key={todo.id} todo={todo} onUpdate={handleUpdate} onDelete={handleDelete} isCompleted={false} />
+                    ))}
+                </ul>
+                <h3 className={style.title}>Complete ✅</h3>
+                <ul className={style.list}>
+                    {completedTodos.map((todo) => (
+                        <Todo key={todo.id} todo={todo} onUpdate={handleUpdate} onDelete={handleDelete} isCompleted />
+                    ))}
+                </ul>
+            </div>
 
         </section>
     );

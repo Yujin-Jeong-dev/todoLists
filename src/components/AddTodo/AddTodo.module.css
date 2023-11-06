@@ -1,5 +1,5 @@
 .header {
-    width: 100%;
+    width: 60%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: #f8ad9d;
@@ -16,11 +16,9 @@
 
 input {
     width: 14rem;
-    height: 1.5rem;
+    height: 2rem;
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    outline: none;
-    border: none;
     border-radius: 2rem;
     margin-right: 1rem;
 }
@@ -29,8 +27,6 @@ input {
     width: 3rem;
     font-size: 1rem;
     color: white;
-    border: none;
-    outline: none;
     border-radius: 20%;
     background-color: #f08080;
     transition: transfrom 3ms ease-in;
@@ -39,4 +35,10 @@ input {
 button:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+@media screen and (max-width:768px) {
+    input {
+        width: 100%;
+    }
 }
