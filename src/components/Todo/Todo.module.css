@@ -48,13 +48,19 @@
 @media screen and (max-width:768px) {
     .todo {
         width: 45%;
+    }
 
-        /* margin-bottom: 0.8rem; */
+    .text {
+        flex-direction: column;
     }
 }
 
 @media screen and (max-width:576px) {
     .todo {
         width: 90%;
+    }
+
+    .text {
+        flex-direction: row;
     }
 }
