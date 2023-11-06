@@ -20,7 +20,7 @@
     color: #283618;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:768px) {
     .lists {
         width: 90%;
     }

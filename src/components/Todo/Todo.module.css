@@ -49,18 +49,10 @@
     .todo {
         width: 45%;
     }
-
-    .text {
-        flex-direction: column;
-    }
 }
 
 @media screen and (max-width:576px) {
     .todo {
         width: 90%;
-    }
-
-    .text {
-        flex-direction: row;
     }
 }
